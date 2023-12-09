@@ -1,15 +1,19 @@
+//do i need to make a kevin function? (main character)
+
 import processing.core.*;
+
 
 
 
 public class earth_io extends PApplet 
 {
 
+private kevin kevin1;
 private PImage startButton; //start button
 private PImage earth; //earth for start screen
 private int imageRadius = 393;
 
-public int gameState = 0; //game state starts on start screen
+public String gameState = "start"; //game state starts on start screen
 
     //setup function
 public void settings()
@@ -18,18 +22,23 @@ fullScreen();
 }
 
 public void setup(){
+
+    kevin1 = new kevin(this, width/2, height/2);
+
+
     startButton = loadImage("startButton.png");
     earth = loadImage("earth.jpg");
+
 
 }
 
 public void draw(){
 
 
- if (gameState == 0){
+ if (gameState == "start"){
      drawStart();      
     }
-if (gameState == 1){
+if (gameState == "drawGame"){
     startPartOne();
 }
 
@@ -48,15 +57,15 @@ image(startButton, width/2, height/2);
 public void mouseClicked(){
 
 //if mouse clicked on start button go to game state 1
-if(dist(mouseX, mouseY, width/2, height/2) < imageRadius && gameState == 0){ //gamestate equals 0 and start button clicked
-gameState = 1; //go to part 1
+if(dist(mouseX, mouseY, width/2, height/2) < imageRadius && gameState == "start"){ //gamestate equals start and start button clicked
+gameState = "drawGame"; //go to part 1
 }
-
 }
 
 //part 1 function
 public void startPartOne(){
 background(255);
+kevin1.display();
 
 }
     
