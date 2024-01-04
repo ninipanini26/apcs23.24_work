@@ -2,27 +2,16 @@
 
 import processing.core.*;
 
-//imported gif library
-//why isn't this working
-import gifAnimation.*;
-
 
 
 
 public class earth_io extends PApplet 
 {
 
-
-
-
 private kevin kevin1;
 private PImage startButton; //start button
 private PImage earth; //earth for start screen
-private PFont font1;
-private int imageRadius = 150;
-
-private Gif gif1;
-
+private int imageRadius = 393;
 
 public String gameState = "start"; //game state starts on start screen
 
@@ -39,12 +28,6 @@ public void setup(){
 
     startButton = loadImage("startButton.png");
     earth = loadImage("earth.jpg");
-    
-    font1 = createFont("font1.ttf", 48);
-    
-    gif1 = new Gif(this,  "0.gif");
-    gif1.play();
-   
 
 
 }
@@ -68,7 +51,6 @@ imageMode(CENTER);
 image(earth, width/2, height/2);
 image(startButton, width/2, height/2);
 
-image(gif1, width/2+200, height/6);
 
 }
 
