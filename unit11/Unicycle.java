@@ -1,6 +1,6 @@
-public class Car implements Vehicle{
+public class Unicycle implements Vehicle{
     
-    public Car(String name, int wheelCount, boolean isHumanPowered){
+    public Unicycle(String name, int wheelCount, boolean isHumanPowered){
         this.name = name;
         this.wheelCount = wheelCount;
         this.isHumanPowered = isHumanPowered;
