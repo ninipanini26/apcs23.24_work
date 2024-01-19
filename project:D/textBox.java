@@ -32,6 +32,7 @@ public class textBox{
         
         p.textFont(font1);
         p.textSize(16);
+        p.fill(0);
         //p.imageMode(CENTER);
         p.image(textBox, x, y);
         //p.textAlign(CENTER, CENTER);
