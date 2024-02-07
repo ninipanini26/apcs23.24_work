@@ -10,6 +10,7 @@ public class earth_io extends PApplet
 
 
 private Scene scene1;
+private Scene scene2; 
 
 private PImage startButton, earth, background1, background2; //images
 private int imageRadius = 250;
@@ -33,6 +34,7 @@ public void setup(){
     background2.resize(width, height);
       
     scene1 = new scene1(this, width, height);
+    scene2 = new scene2(this, width, height);
 
 }
 
@@ -45,7 +47,7 @@ public void draw(){
 if (gameState.equals("scene1")){
     scene1.display();
 } if(gameState.equals("scene2")){
-   // startScene2();
+   scene2.display();
 }
 }
 
@@ -66,9 +68,10 @@ gameState = "scene1"; //go to part 1
 
 }
 
-scene1.keyPressed();
+scene1.mousePressed();
+System.out.println(scene1.returnvar());
 
-if(dist(mouseX, mouseY,width/4-100, height-300)<= 50 && scene1.returnvar()== 3){
+if(dist(mouseX, mouseY,width/4-100, height-300)<= 50 && scene1.returnvar()>= 4){
     gameState = "scene2";
 }
 

@@ -22,9 +22,11 @@ public class textBox{
             
             //current index variable at 0
             
-            if(p.frameCount%5==0 && current<text1.length())
+            if(p.frameCount%==2 && current<text1.length())
                 current++;
-        
+            if(current >= text1.length()){
+                isDone = true;
+            }
         
     }
     
@@ -39,6 +41,8 @@ public class textBox{
         p.text(text1.substring(0, current),x,y+h/4, w-w/4, h);
     }
     
+    public boolean isDone(){return isDone;}
+    
     private PApplet p;
     private float x;
     private float y;
@@ -47,4 +51,5 @@ public class textBox{
     private String text1;
     private int current;
     private PFont font1;
+    private boolean isDone = false;
 }

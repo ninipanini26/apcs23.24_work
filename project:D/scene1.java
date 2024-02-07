@@ -34,16 +34,16 @@ p.rectMode(p.CENTER);
 p.strokeWeight(5);
 p.stroke(70, 168, 50);
 p.fill(255);
-p.rect(w/3-50, h-300, 450, 100, 5);
+p.rect(w/3-75, h-300, 450, 100, 5);
 if(scene1State == 1){
 p.fill(0);
 textBox1.display();
 textBox1.update();
 p.textSize(14);
-p.text("what is global warming?", p.width/4-50, p.height-300);
+p.text("what is global warming?", w/4-50, h-300);
 p.fill(70, 168, 50);
 p.noStroke();
-p.rect(w/4-100, h-300, 50, 50, 5);
+p.rect(w/4-120, h-300, 50, 50, 5);
 
 } else if (scene1State == 2){
     textBox2.display();
@@ -51,7 +51,7 @@ p.rect(w/4-100, h-300, 50, 50, 5);
     p.fill(0);
 p.text("how can i help?", w/4-50, h-300);
 p.fill(70, 168, 50);
-p.rect(w/4-100, h-300, 50, 50, 5);
+p.rect(w/4-120, h-300, 50, 50, 5);
 }
 
 else if(scene1State == 3){
@@ -61,18 +61,20 @@ else if(scene1State == 3){
     p.text("okay let's do it!", w/4-50, h-300);
     p.fill(70, 168, 50);
     p.noStroke();
-    p.rect(w/4-100, h-300, 50, 50, 5);
+    p.rect(w/4-120, h-300, 50, 50, 5);
 }
         
     }
     
-    public void keyPressed(){
+    public void mousePressed(){
         
-if(p.dist(p.mouseX, p.mouseY,w/4-100, h-300)<= 50 && (scene1State == 1)){
+if(p.dist(p.mouseX, p.mouseY,w/4-100, h-300)<= 50 && (scene1State == 1) && textBox1.isDone()){
 scene1State = 2;
 }
-else if(p.dist(p.mouseX, p.mouseY,w/4-100,h-300)<= 50 && (scene1State == 2)){
+else if(p.dist(p.mouseX, p.mouseY,w/4-100,h-300)<= 50 && (scene1State == 2) && textBox2.isDone()){
 scene1State = 3;
+}else if (textBox3.isDone()){
+    scene1State =4;
 }
     }
     
