@@ -2,7 +2,7 @@
 
 import processing.core.*;
 
-import gifAnimation.*;
+//import gifAnimation.*;
 
 
 public class earth_io extends PApplet 
@@ -67,7 +67,6 @@ if(dist(mouseX, mouseY, width/2, height/2) <= imageRadius && gameState == "start
 gameState = "scene1"; //go to part 1
 
 }
-
 scene1.mousePressed();
 System.out.println(scene1.returnvar());
 

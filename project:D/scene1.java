@@ -21,7 +21,7 @@ public class scene1 implements Scene{
      textBox3 = new textBox(p, w/4+50, h/4+50, 700,400, "HELP ME GO ABOUT MY DAY MAKING EARTH-CONCIOUS DECISIONS! IF YOU DO WELL, YOU WILL INCREASE YOUR EARTH BUCKS!");
         
      //initializing kevin
-    kevin1 = new kevin(p, w/2+100, h/2+100);
+    kevin1 = new kevin(p, w/2+100, h-300, textBox1);
     
     }
     
@@ -70,9 +70,12 @@ else if(scene1State == 3){
         
 if(p.dist(p.mouseX, p.mouseY,w/4-100, h-300)<= 50 && (scene1State == 1) && textBox1.isDone()){
 scene1State = 2;
+    //update the current text box kevin is on
+kevin1.setCurrentTextBox(textBox2);
 }
 else if(p.dist(p.mouseX, p.mouseY,w/4-100,h-300)<= 50 && (scene1State == 2) && textBox2.isDone()){
 scene1State = 3;
+kevin1.setCurrentTextBox(textBox3);
 }else if (textBox3.isDone()){
     scene1State =4;
 }

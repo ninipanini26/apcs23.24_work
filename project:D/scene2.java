@@ -7,14 +7,15 @@ public class scene2 implements Scene{
         this.w = w;
         this.h = h;
         scene2State = 1;
-        groceryBackground = p.loadImage("grocery2.jpg");
-        groceryBackground.resize(w+10,h);
+        groceryBackground = p.loadImage("grocery.png");
+        groceryBackground.resize(w+50,h+50);
         //initializing kevin
-        kevin2 = new kevin(p, w/2, h/2);
-        textBox1 = new textBox(p, w/4+75, h/4+50, 300, 200, "WELCOME TO THE GROCERY STORE!");
+        textBox1 = new textBox(p, w/4+75, h/2+50, 300, 200, "WELCOME TO THE FOOD MARKET!");
+        kevin2 = new kevin(p, w/2, h-220, textBox1);
     }
     
     public void display(){
+        p.background(255);
         p.imageMode(p.CENTER);
         p.image(groceryBackground, w/2,h/2);
         textBox1.display();
@@ -38,7 +39,7 @@ public class scene2 implements Scene{
     private int scene2State;
     private int w;
     private int h;
-    private PImage groceryBackground;
+   private PImage groceryBackground;
     private kevin kevin2;
     private textBox textBox1;
     

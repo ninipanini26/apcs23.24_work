@@ -22,7 +22,7 @@ public class textBox{
             
             //current index variable at 0
             
-            if(p.frameCount%==2 && current<text1.length())
+            if(p.frameCount%3==0 && current<text1.length())
                 current++;
             if(current >= text1.length()){
                 isDone = true;
