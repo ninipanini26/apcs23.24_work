@@ -32,6 +32,9 @@ public class kevin{
         this.currentTextBox = tb;
     }
     
+   public textBox getCurrentTextBox() {return currentTextBox;}
+    
+    
     // Function to check if the current textBox is done talking
     public boolean isCurrentTextBoxDone() {
         return currentTextBox.isDone();
@@ -51,9 +54,9 @@ else {
 }
 
     //double checking if everything works
-System.out.println("Kevin dimensions: " + kevin.width + " x " + kevin.height);
-System.out.println("KevinOpen dimensions: " + kevinOpen.width + " x " + kevinOpen.height);
-System.out.println("Frame count: " + p.frameCount);
+//System.out.println("Kevin dimensions: " + kevin.width + " x " + kevin.height);
+//System.out.println("KevinOpen dimensions: " + kevinOpen.width + " x " + kevinOpen.height);
+//System.out.println("Frame count: " + p.frameCount);
 
 }
     //walk function

@@ -3,13 +3,16 @@ import processing.core.*;
 public class scene1 implements Scene{
 
     
-    public scene1(PApplet p, int w, int h){
+    public scene1(earth_io p, int w, int h){
     
     this.p = p;
     this.w = w;
     this.h = h;
     background1 = p.loadImage("background.jpg");
    background1.resize(w, h);
+        
+    earthBuck = p.loadImage("earthBuck.png");
+    earthBuck.resize(w/8, h/8);
     
         
      scene1State = 1;
@@ -57,7 +60,14 @@ p.rect(w/4-120, h-300, 50, 50, 5);
 else if(scene1State == 3){
     textBox3.display();
     textBox3.update();
+    p.rectMode(p.CENTER);
+    p.fill(255);
+    p.rect(w/2+400, h/4-100, 500, 100);
     p.fill(0);
+     p.text("EARTH BUCKS:$ " + p.accessBucks(), w-550, h/4-100);
+     p.imageMode(p.CENTER);
+    p.image(earthBuck, w-150, h/4-100);
+    
     p.text("okay let's do it!", w/4-50, h-300);
     p.fill(70, 168, 50);
     p.noStroke();
@@ -88,14 +98,15 @@ kevin1.setCurrentTextBox(textBox3);
     public int returnvar(){
         return scene1State;
     }
-    
+
     private textBox textBox1;
     private textBox textBox2;
     private textBox textBox3;
-    private PApplet p;
+    private earth_io p;
     private int scene1State;
     private int w;
     private int h;
     private kevin kevin1;
     private PImage background1;
+    private PImage earthBuck;
 }

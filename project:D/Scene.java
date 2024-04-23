@@ -4,6 +4,7 @@ public interface Scene{
     public void mousePressed();
     public void reset();
     public int returnvar();
+ 
     
     }
     
