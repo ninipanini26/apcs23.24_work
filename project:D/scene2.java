@@ -69,10 +69,11 @@ public class scene2 implements Scene{
         p.fill(255);
         p.rect(w/2+400, h/4-100, 500, 100);
         p.fill(0);
-        p.text("EARTH BUCKS:$ " + p.accessBucks(), w-550, h/4-100);
+        p.text("EARTH BUCKS:$ " + (int) p.accessBucks(), w-550, h/4-100);
         p.imageMode(p.CENTER);
         p.image(earthBuck, w-150, h/4-100);
         
+              p.textAlign(p.LEFT);
         
         if(scene2State == 1){
         textBox1.display();
@@ -90,7 +91,7 @@ public class scene2 implements Scene{
         p.rect(w/4-200, h-200, 50, 50, 5);
         p.textSize(14);
         p.fill(0);
-        p.text("Cool!", w/4-50, h-200);
+        p.text("Cool!", w/4-100, h-200);
         }
 
         else if(scene2State == 2){
@@ -135,7 +136,7 @@ public class scene2 implements Scene{
         p.noStroke();
         p.rect(w/4-200, h-200, 50, 50, 5);
         p.fill(0);
-            p.text("Boohoo.", w/4-150, h-200);
+            p.text("Boohoo.", w/4-100, h-200);
         }
         
         //if you do watermelon do watermelon text box
@@ -154,7 +155,7 @@ public class scene2 implements Scene{
         p.noStroke();
         p.rect(w/4-200, h-200, 50, 50, 5);
         p.fill(0);
-            p.text("YIPPEEE!", w/4-150, h-200);
+            p.text("YIPPEEE!", w/4-100, h-200);
         }
     
    else if(scene2State == 6){
@@ -181,7 +182,7 @@ public class scene2 implements Scene{
         p.noStroke();
         p.rect(w/4-200, h-200, 50, 50, 5);
         p.fill(0);
-            p.text("WAHOO!", w/4-150, h-200);
+            p.text("WAHOO!", w/4-100, h-200);
     }
     
     else if(scene2State == 8){
@@ -199,7 +200,7 @@ public class scene2 implements Scene{
         p.noStroke();
         p.rect(w/4-200, h-200, 50, 50, 5);
         p.fill(0);
-            p.text("YAAAAAS!", w/4-150, h-200);
+            p.text("YAAAAAS!", w/4-100, h-200);
     }
         
 else if(scene2State == 9){
@@ -224,7 +225,7 @@ else if(scene2State == 10){
         //green rectangle 
         p.fill(70, 168, 50);
         p.noStroke();
-        p.rect(w/4-200, h-200, 50, 50, 5);
+        p.rect(w/4-250, h-200, 50, 50, 5);
         p.fill(0);
             p.text("YAYY! LET'S GO!", w/4-150, h-200);
     
@@ -244,9 +245,9 @@ else if(scene2State == 11){
         //green rectangle 
         p.fill(70, 168, 50);
         p.noStroke();
-        p.rect(w/4-200, h-200, 50, 50, 5);
+        p.rect(w/4-250, h-200, 50, 50, 5);
         p.fill(0);
-            p.text("ugh i guess", w/4-150, h-200);
+            p.text("ugh i guess", w/4, h-200);
 }
         
     }

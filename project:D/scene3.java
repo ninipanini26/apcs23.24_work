@@ -6,7 +6,7 @@ public class scene3 implements Scene{
         this.h = h;
         scene3State = 1;
         textBox1 = new textBox(p, w/2, h/4, 500, 300, "QUICK QUESTION: SHOULD I TAKE MY BIKE OR MY SCOOTER BACK HOME??? THE BIKE WILL TAKE LONGER BUT I DON'T HAVE TO GET HOME SUPER QUICKLY...");
-        textBox2 = new textBox(p, w/2-200, h/4+100, 500, 300, "UGH. I WANT TO TAKE MY SCOOTER BUT THE MOTOR BURNS A LOT OF CO2. LOOKS LIKE WE DIDN'T GET MANY EARTH BUCKS FROM THIS CHOICE...");
+        textBox2 = new textBox(p, w/2-200, h/4+100, 500, 300, "UGH. I WANT TO TAKE MY SCOOTER BUT THE MOTOR BURNS A LOT OF CO2. LOOKS LIKE WE DID NOT GET MANY EARTH BUCKS FROM THIS CHOICE...");
         textBox3 = new textBox(p, w/2-200, h/4+100, 500, 300, "YAYYY MY BIKE SEEMS TO BE A VERY EARTH CONCIOUS CHOICE! WE GOT 30 EARTH BUCKS! I CAN'T WAIT TO RIDE HOME!!");
         
         //loading the background 
@@ -59,7 +59,7 @@ if(textBox1.isDone() && scene3State == 1){
         p.rect(w/2-210, h-350, 50, 50, 5);
         p.textSize(14);
         p.fill(0);
-        p.text("SCOOTER", w/4-50, h-350);
+        p.text("SCOOTER", w/4, h-350);
     
             p.rectMode(p.CENTER);
         p.strokeWeight(5);
@@ -88,7 +88,7 @@ textBox2.update();
         p.fill(255);
         p.rect(w/2+400, h/4-100, 500, 100);
         p.fill(0);
-        p.text("EARTH BUCKS:$ " + p.accessBucks(), w-550, h/4-100);
+        p.text("EARTH BUCKS:$ " + (int) p.accessBucks(), w-400, h/4-100);
         p.imageMode(p.CENTER);
         p.image(earthBuck, w-150, h/4-100);
         p.rectMode(p.CENTER);
@@ -102,7 +102,7 @@ textBox2.update();
         p.rect(w/2+210, h-350, 50, 50, 5);
         p.textSize(14);
         p.fill(0);
-        p.text("let's go home...", w/2+225, h-350);
+        p.text("let's go home.", w/2+235, h-350);
     
         
 p.image(scooter, w/2-300, h-150);
@@ -120,7 +120,8 @@ textBox3.update();
         p.fill(255);
         p.rect(w/2+400, h/4-100, 500, 100);
         p.fill(0);
-        p.text("EARTH BUCKS:$ " + p.accessBucks(), w-550, h/4-100);
+        p.textAlign(p.CENTER);
+        p.text("EARTH BUCKS:$ " + (int) p.accessBucks(), w-400, h/4-100);
         p.imageMode(p.CENTER);
         p.image(earthBuck, w-150, h/4-100); 
 
@@ -135,7 +136,7 @@ textBox3.update();
         p.rect(w/2-210, h-350, 50, 50, 5);
         p.textSize(14);
         p.fill(0);
-        p.text("lets go home!", w/4-50, h-350);
+        p.text("lets go home!", w/4+10, h-350);
 p.image(bike, w/2+400, h-100);
 }
     

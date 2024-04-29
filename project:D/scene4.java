@@ -93,11 +93,10 @@ p.image(compostBin, w/8+300, h-150);
         p.fill(255);
         p.rect(w/2+400, h/4-100, 500, 100);
         p.fill(0);
-        p.text("EARTH BUCKS:$ " + p.accessBucks(), w-550, h/4-100);
+        p.text("EARTH BUCKS:$ " + (int) p.accessBucks(), w-550, h/4-100);
         p.imageMode(p.CENTER);
         p.image(earthBuck, w-150, h/4-100); 
 
-      
 if(scene4State == 1){
   textBox1.display();
 textBox1.update(); 
@@ -376,7 +375,7 @@ if(scene4State==15){
         p.rect(w/2+210, h-200, 50, 50, 5);
         p.textSize(14);
         p.fill(0);
-        p.text("YAYY", w/2+w/6, h-200);
+        p.text("YAYY", w/2+w/4, h-200);
 }else if(scene4State == 16 && isCompost == false){
          textBox23.display();
     textBox23.update();
@@ -395,6 +394,18 @@ if(scene4State==15){
       if(scene4State == 17){
           textBox24.display();
           textBox24.update();
+              p.strokeWeight(5);
+        p.stroke(70, 168, 50);
+        p.fill(255);
+        p.rect(w/2+300, h-200, 300, 75, 5);
+        //green rectangle 
+        p.fill(70, 168, 50);
+        p.noStroke();
+        p.rect(w/2+210, h-200, 50, 50, 5);
+        p.textSize(14);
+        p.fill(0);
+        p.text("yayy!", w/2+w/4, h-200);
+          
       }
   }
 

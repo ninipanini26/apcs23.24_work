@@ -37,7 +37,7 @@ public class textBox{
         p.fill(0);
         //p.imageMode(CENTER);
         p.image(textBox, x, y);
-        //p.textAlign(CENTER, CENTER);
+        p.textAlign(p.LEFT);
         p.text(text1.substring(0, current),x,y+h/4, w-w/4, h);
     }
     

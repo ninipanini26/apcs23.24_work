@@ -29,7 +29,6 @@ public class scene1 implements Scene{
     }
     
     public void display(){
-        
 p.imageMode(p.CENTER);
 p.image(background1, w/2,h/2);
 kevin1.display();
@@ -64,7 +63,7 @@ else if(scene1State == 3){
     p.fill(255);
     p.rect(w/2+400, h/4-100, 500, 100);
     p.fill(0);
-     p.text("EARTH BUCKS:$ " + p.accessBucks(), w-550, h/4-100);
+     p.text("EARTH BUCKS:$ " + (int) p.accessBucks(), w-550, h/4-100);
      p.imageMode(p.CENTER);
     p.image(earthBuck, w-150, h/4-100);
     
